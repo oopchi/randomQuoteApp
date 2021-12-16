@@ -20,8 +20,18 @@ class QuoteViewController: UITableViewController {
     
     override func viewDidLoad() {
         progressView.wait()
+        
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(self.popToPreviousView))
+        swipe.direction = .right
+        
+        view.addGestureRecognizer(swipe)
+        
         tableView.register(UINib(nibName: K.quoteNibName, bundle: nil), forCellReuseIdentifier: K.quoteCellIdentifier)
         tableView.reloadData()
+    }
+    
+    @objc func popToPreviousView() {
+        navigationController?.popViewController(animated: true)
     }
     
     func fetchQuotes(with author: String) {
