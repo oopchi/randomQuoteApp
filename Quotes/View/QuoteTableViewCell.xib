@@ -20,17 +20,29 @@
                         <rect key="frame" x="8" y="8" width="420" height="252"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Content" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWB-e2-f0C">
-                                <rect key="frame" x="8" y="0.0" width="404" height="223.5"/>
+                                <rect key="frame" x="8" y="0.0" width="404" height="165.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-3H-bzS">
-                                <rect key="frame" x="8" y="231.5" width="404" height="20.5"/>
+                                <rect key="frame" x="8" y="173.5" width="404" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAj-j5-jLT">
+                                <rect key="frame" x="176.5" y="202" width="67" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="O1p-Fh-NGd"/>
+                                    <constraint firstAttribute="height" constant="50" id="oQM-Dx-NWa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Copy"/>
+                                <connections>
+                                    <action selector="copyButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mUw-14-sbo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="TWB-e2-f0C" firstAttribute="leading" secondItem="jT7-q5-MRt" secondAttribute="leading" constant="8" id="ek4-jq-iUd"/>

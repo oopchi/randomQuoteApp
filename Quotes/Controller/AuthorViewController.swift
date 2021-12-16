@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import DSGradientProgressView
 
 class AuthorViewController: UIViewController {
+    @IBOutlet weak var progressView: DSGradientProgressView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,6 +20,8 @@ class AuthorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        progressView.wait()
+        
         hideKeyboard()
         searchBar.delegate = self
         
@@ -43,6 +47,7 @@ class AuthorViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
+                            self.progressView.signal()
                         }
                     }catch {
                         print(error)

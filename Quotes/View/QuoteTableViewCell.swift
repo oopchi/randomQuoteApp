@@ -12,6 +12,19 @@ class QuoteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var tagLabel: UILabel!
     
+    let alert = UIAlertController(title: "Copied to clipboard!", message: "", preferredStyle: .alert)
+    
+    @IBAction func copyButtonPressed(_ sender: UIButton) {
+        UIPasteboard.general.string = content.text
+        
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: {
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.hideAlert), userInfo: nil, repeats: false)
+        })
+    }
+    
+    @objc func hideAlert() {
+        alert.dismiss(animated: true, completion: nil)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

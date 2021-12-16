@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import DSGradientProgressView
 
 class QuoteViewController: UITableViewController {
+    @IBOutlet weak var progressView: DSGradientProgressView!
     
     var quotes: Quote? = nil
     var selectedAuthor: String?{
@@ -17,13 +19,16 @@ class QuoteViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        progressView.wait()
         tableView.register(UINib(nibName: K.quoteNibName, bundle: nil), forCellReuseIdentifier: K.quoteCellIdentifier)
         tableView.reloadData()
     }
     
     func fetchQuotes(with author: String) {
         var urlComp = URLComponents(string: "https://goquotes-api.herokuapp.com/api/v1/random/1")
-        urlComp?.queryItems = [URLQueryItem(name: "type", value: "author"), URLQueryItem(name: "val", value: author)
+        urlComp?.queryItems = [
+            URLQueryItem(name: "type", value: "author"),
+            URLQueryItem(name: "val", value: author)
         ]
         if let url = urlComp?.url {
             let session = URLSession(configuration: .default)
@@ -37,6 +42,7 @@ class QuoteViewController: UITableViewController {
                         self.quotes = try decoder.decode(Quote.self, from: quoteJson)
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
+                            self.progressView.signal()
                         }
                     }catch {
                         print(error)

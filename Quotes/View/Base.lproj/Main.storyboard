@@ -25,6 +25,11 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="IhM-xz-E3H" customClass="DSGradientProgressView" customModule="DSGradientProgressView">
+                                    <rect key="frame" x="0.0" y="815" width="414" height="3"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="authorCell" id="6XT-b0-zlB">
                                         <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
@@ -42,6 +47,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Authors" id="1Qw-GG-2yg"/>
                     <connections>
+                        <outlet property="progressView" destination="IhM-xz-E3H" id="LEe-EV-X6y"/>
                         <outlet property="searchBar" destination="jwP-1V-K3i" id="FbA-I0-INb"/>
                         <outlet property="tableView" destination="suu-OP-jov" id="k30-WC-Wcg"/>
                         <segue destination="zlv-cX-nf9" kind="show" identifier="authorsToQuotes" id="JdG-Vf-0Dg"/>
@@ -59,12 +65,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="obJ-U9-dx3" customClass="DSGradientProgressView" customModule="DSGradientProgressView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="3"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="zlv-cX-nf9" id="yws-lC-8Ex"/>
                             <outlet property="delegate" destination="zlv-cX-nf9" id="xRU-Wy-mgt"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Quotes" id="ERM-RR-f4I"/>
+                    <connections>
+                        <outlet property="progressView" destination="obJ-U9-dx3" id="iBc-2n-MaZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNd-jD-RPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
