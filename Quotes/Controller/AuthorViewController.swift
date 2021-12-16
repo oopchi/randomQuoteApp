@@ -8,14 +8,18 @@
 import UIKit
 
 class AuthorViewController: UIViewController {
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var authors: Author?
+    var authorArray: [AuthorMember]?
     var selectedAuthor: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        hideKeyboard()
+        searchBar.delegate = self
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,6 +39,7 @@ class AuthorViewController: UIViewController {
                     let decoder = JSONDecoder()
                     do {
                         self.authors = try decoder.decode(Author.self, from: authorJson)
+                        self.authorArray = self.authors?.authors
                         
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
@@ -62,14 +67,14 @@ class AuthorViewController: UIViewController {
 extension AuthorViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.authorCellIdentifier)!
-        if let authorLoaded = authors?.authors {
-            cell.textLabel?.text = authorLoaded[indexPath.row].name
+        if let authorArrayNotEmpty = authorArray {
+            cell.textLabel?.text = authorArrayNotEmpty[indexPath.row].name
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return authors?.authors.count ?? 0
+        return authorArray?.count ?? 0
     }
 }
 
@@ -84,5 +89,29 @@ extension AuthorViewController: UITableViewDelegate {
         selectedAuthor = tableView.cellForRow(at: indexPath)?.textLabel?.text
         
         performSegue(withIdentifier: K.authorToQuoteSegue, sender: self)
+    }
+}
+
+//MARK: - Search Bar Delegate Methods
+
+extension AuthorViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        DispatchQueue.main.async {
+            searchBar.resignFirstResponder()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let authorTemp = authors?.authors {
+            if searchText.count == 0 {
+                authorArray = authorTemp
+            }
+            else {
+                authorArray = authorTemp.filter { author in
+                    return author.name.contains(searchText)
+                }
+            }
+        }
+        tableView.reloadData()
     }
 }

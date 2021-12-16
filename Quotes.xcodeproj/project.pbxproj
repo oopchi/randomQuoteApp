@@ -19,6 +19,7 @@
 		0085B3B8276B3E5700DB61CD /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3B7276B3E5700DB61CD /* AuthorModel.swift */; };
 		0085B3BF276B523400DB61CD /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3BD276B523300DB61CD /* QuoteTableViewCell.swift */; };
 		0085B3C0276B523400DB61CD /* QuoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085B3BE276B523300DB61CD /* QuoteTableViewCell.xib */; };
+		00FF4B7A276B738000BE4920 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FF4B79276B738000BE4920 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +33,11 @@
 		0085B3A8276B3A1300DB61CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0085B3AA276B3A1300DB61CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0085B3B3276B3AA000DB61CD /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteModel.swift; path = Quotes/Model/QuoteModel.swift; sourceTree = SOURCE_ROOT; };
-		0085B3B5276B3D2100DB61CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
+		0085B3B5276B3D2100DB61CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0085B3B7276B3E5700DB61CD /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthorModel.swift; path = Quotes/Model/AuthorModel.swift; sourceTree = SOURCE_ROOT; };
 		0085B3BD276B523300DB61CD /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		0085B3BE276B523300DB61CD /* QuoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteTableViewCell.xib; sourceTree = "<group>"; };
+		00FF4B79276B738000BE4920 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		0085B39B276B3A1200DB61CD /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				00FF4B79276B738000BE4920 /* Extensions.swift */,
 				0085B3B5276B3D2100DB61CD /* Constants.swift */,
 				0085B3B0276B3A2600DB61CD /* Model */,
 				0085B3B1276B3A2F00DB61CD /* View */,
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0085B3B6276B3D2100DB61CD /* Constants.swift in Sources */,
+				00FF4B7A276B738000BE4920 /* Extensions.swift in Sources */,
 				00823451276B5CE900DE6CE4 /* QuoteViewController.swift in Sources */,
 				0085B3A1276B3A1200DB61CD /* AuthorViewController.swift in Sources */,
 				0085B39D276B3A1200DB61CD /* AppDelegate.swift in Sources */,
