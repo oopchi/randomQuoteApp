@@ -108,7 +108,7 @@ extension AuthorViewController: UISearchBarDelegate {
             }
             else {
                 authorArray = authorTemp.filter { author in
-                    return author.name.contains(searchText)
+                    return author.name.localizedStandardContains(searchText)
                 }
             }
         }
