@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00823451276B5CE900DE6CE4 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00823450276B5CE900DE6CE4 /* QuoteViewController.swift */; };
 		0085B39D276B3A1200DB61CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B39C276B3A1200DB61CD /* AppDelegate.swift */; };
 		0085B39F276B3A1200DB61CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B39E276B3A1200DB61CD /* SceneDelegate.swift */; };
 		0085B3A1276B3A1200DB61CD /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3A0276B3A1200DB61CD /* AuthorViewController.swift */; };
@@ -16,12 +17,12 @@
 		0085B3B4276B3AA000DB61CD /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3B3276B3AA000DB61CD /* QuoteModel.swift */; };
 		0085B3B6276B3D2100DB61CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3B5276B3D2100DB61CD /* Constants.swift */; };
 		0085B3B8276B3E5700DB61CD /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3B7276B3E5700DB61CD /* AuthorModel.swift */; };
-		0085B3BC276B463B00DB61CD /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3BB276B463B00DB61CD /* QuoteViewController.swift */; };
 		0085B3BF276B523400DB61CD /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0085B3BD276B523300DB61CD /* QuoteTableViewCell.swift */; };
 		0085B3C0276B523400DB61CD /* QuoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085B3BE276B523300DB61CD /* QuoteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00823450276B5CE900DE6CE4 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		0085B399276B3A1200DB61CD /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0085B39C276B3A1200DB61CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0085B39E276B3A1200DB61CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +31,9 @@
 		0085B3A5276B3A1300DB61CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0085B3A8276B3A1300DB61CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0085B3AA276B3A1300DB61CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0085B3B3276B3AA000DB61CD /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteModel.swift; path = Quotes/Controller/QuoteModel.swift; sourceTree = SOURCE_ROOT; };
+		0085B3B3276B3AA000DB61CD /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteModel.swift; path = Quotes/Model/QuoteModel.swift; sourceTree = SOURCE_ROOT; };
 		0085B3B5276B3D2100DB61CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
-		0085B3B7276B3E5700DB61CD /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthorModel.swift; path = Quotes/Controller/AuthorModel.swift; sourceTree = SOURCE_ROOT; };
-		0085B3BB276B463B00DB61CD /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = SOURCE_ROOT; };
+		0085B3B7276B3E5700DB61CD /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthorModel.swift; path = Quotes/Model/AuthorModel.swift; sourceTree = SOURCE_ROOT; };
 		0085B3BD276B523300DB61CD /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		0085B3BE276B523300DB61CD /* QuoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,7 @@
 		0085B3B2276B3A3600DB61CD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0085B3BB276B463B00DB61CD /* QuoteViewController.swift */,
+				00823450276B5CE900DE6CE4 /* QuoteViewController.swift */,
 				0085B3A0276B3A1200DB61CD /* AuthorViewController.swift */,
 			);
 			path = Controller;
@@ -182,12 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0085B3B6276B3D2100DB61CD /* Constants.swift in Sources */,
+				00823451276B5CE900DE6CE4 /* QuoteViewController.swift in Sources */,
 				0085B3A1276B3A1200DB61CD /* AuthorViewController.swift in Sources */,
 				0085B39D276B3A1200DB61CD /* AppDelegate.swift in Sources */,
 				0085B3B4276B3AA000DB61CD /* QuoteModel.swift in Sources */,
 				0085B3BF276B523400DB61CD /* QuoteTableViewCell.swift in Sources */,
 				0085B3B8276B3E5700DB61CD /* AuthorModel.swift in Sources */,
-				0085B3BC276B463B00DB61CD /* QuoteViewController.swift in Sources */,
 				0085B39F276B3A1200DB61CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
